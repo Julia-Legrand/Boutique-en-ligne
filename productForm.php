@@ -3,13 +3,11 @@ $pdo = new PDO('mysql:host=localhost;dbname=boutique;port=3306','root','root', a
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 if ($_POST) {
-    $name = ($_POST['name']); 
-    $idCategory = $_POST['idCategory'];
-    $reference = ($_POST['reference']);
-    $price = $_POST['price'];
+    $name = htmlspecialchars($_POST['name']); 
+    $idCategory = (int)$_POST['idCategory'];
+    $reference = htmlspecialchars($_POST['reference']);
+    $price = (float)$_POST['price'];
     $image = $_FILES['image']['name'];
-
-var_dump($image);
 
     $req = $pdo->prepare("INSERT INTO products(name, idCategory, reference, price, image)
                             VALUES(:name, :idCategory, :reference, :price, :image)");

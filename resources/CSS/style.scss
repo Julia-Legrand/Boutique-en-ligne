@@ -1,0 +1,454 @@
+@import 'mixins';
+@import 'variables';
+
+/***** GLOBAL *****/
+h1 {
+    @include title1;
+}
+
+h2 {
+    @include title2;
+}
+
+h2::after {
+    display: block;
+    height: 2px;
+    background-color: $darkpurple;
+    width: 100px;
+    content: "";
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px
+}
+
+h3 {
+    @include title3;
+}
+
+p {
+    @include paragraph;
+}
+
+.input {
+    @include input;
+}
+
+.submit {
+    @include submit;
+}
+
+.submit:hover {
+    background-color: $middlepurple;
+    color: white;
+    text-decoration: none;
+}
+
+/***** HEADER *****/
+header {
+    .navbar-expand-lg {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .home-title {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 95vh;
+        background-image: url(../images/wallpaper.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+
+.navSubmit {
+    @include navSubmit;
+}
+
+/********** INDEX **********/
+
+/***** CATEGORIES *****/
+#categories {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 40px;
+
+    .shoeCategories {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+
+        .boots {
+            height: 500px;
+            width: 300px;
+            background-image: linear-gradient(rgba(68, 44, 95, 0.9), rgba(3, 2, 3, 0)), url(../images/bottes.png);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            box-shadow: rgba(74, 48, 104, 0.2) 0px 7px 29px 0px;
+            border-radius: 10px;
+            margin: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: start;
+        }
+
+        .ankleBoots {
+            height: 500px;
+            width: 300px;
+            background-image: linear-gradient(rgba(68, 44, 95, 0.9), rgba(3, 2, 3, 0)), url(../images/bottines.png);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            box-shadow: rgba(74, 48, 104, 0.2) 0px 7px 29px 0px;
+            border-radius: 10px;
+            margin: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: start;
+        }
+    }
+
+    .shoeCategories .submit:hover {
+        text-decoration: none;
+        background-color: $middlepurple;
+        color: white;
+    }
+}
+
+/***** OUR STORY *****/
+#ourStory {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .story {
+        display: flex;
+
+        .storyText {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            padding: 40px 40px 40px 80px;
+            width: 60%;
+        }
+
+        .storyPhoto {
+            width: 40%;
+            height: 500px;
+            background-image: url(../images/creator.png);
+            background-position: center;
+            background-size: cover;
+            box-shadow: rgba(74, 48, 104, 0.2) 0px 7px 29px 0px;
+            margin: 20px 60px 20px 20px;
+            border-radius: 10px;
+        }
+    }
+}
+
+/***** GUESTS COMMENTS *****/
+#comments {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .commentsLine {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: 20px 0;
+
+        .guest {
+            display: flex;
+            align-items: center;
+            margin: 40px;
+        }
+    }
+
+    .guest {
+        .picture1 {
+            background-image: url(../images/clients/client1.png);
+            background-position: center;
+            background-size: cover;
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+            margin: 10px;
+        }
+
+        .picture2 {
+            background-image: url(../images/clients/client2.png);
+            background-position: center;
+            background-size: cover;
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+            margin: 10px;
+        }
+
+        .picture3 {
+            background-image: url(../images/clients/client3.png);
+            background-position: center;
+            background-size: cover;
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+            margin: 10px;
+        }
+    }
+
+    .commentTitle {
+        height: 150px;
+        width: 220px;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+
+        .nameGuest {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+        }
+
+        q {
+            font-style: italic;
+        }
+
+        q:before {
+            content: "\201C";
+            font-size: 450%;
+            font-family: 'Montserrat', sans-serif;
+            color: $middlepurple;
+        }
+    }
+}
+
+/***** SERVICES *****/
+#services {
+    background: linear-gradient(to right, #C43825, #F1C5AB, #9C4380);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+
+    .guestService {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 80px;
+
+        i {
+            font-size: 50px;
+            margin-bottom: 30px;
+        }
+    }
+}
+
+/***** NEWSLETTER *****/
+#newsletter {
+    background-image: url(../images/wallpaper2.jpg);
+    background-position: top;
+    background-size: cover;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/***** FOOTER *****/
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .blocLeft {
+        display: flex;
+        align-items: center;
+        margin: 20px;
+
+        i {
+            margin: 0 5px;
+        }
+    }
+
+    .blocRight a {
+        color: $darkpurple;
+        margin: 0 10px;
+    }
+}
+
+/********** LOGIN, USERS, ADMIN, UPDATE PRODUCTS **********/
+.body3 {
+    background-image: linear-gradient(rgba(41, 34, 49, 0.9), rgba(3, 2, 3, 0)), url(../images/wallpaper3.jpg);
+    background-position: center;
+    background-size: cover;
+    color: white;
+
+    h2 {
+        color: white;
+        font-size: 40px;
+    }
+
+    h2::after {
+        background-color: white;
+    }
+}
+
+a.brand {
+    color: white;
+    font-family: 'Caprasimo', serif;
+    text-decoration: none;
+    font-size: 30px;
+    margin: 10px;
+}
+
+.main2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .bloc,
+    .bloc1,
+    .bloc2,
+    .bloc3 {
+        margin: 20px;
+    }
+
+    .bloc3 {
+        display: flex;
+        justify-content: start;
+        align-items: start;
+
+        .bloc4 {
+            padding-top: 5px;
+            background-color: white;
+            border-radius: 10px;
+            margin: 0 10px;
+        }
+
+        label,
+        li {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 15px;
+            color: #A9A9A9;
+            padding: 0 15px;
+        }
+    }
+}
+
+table {
+    border: 1px solid white;
+    border-collapse: collapse;
+    table-layout: auto;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 50px;
+
+    td {
+        border: 1px solid white;
+        height: 40px;
+        text-align: center;
+        padding: 5px;
+    }
+
+    th {
+        border: 1px solid white;
+        height: 40px;
+        text-align: center;
+        padding: 5px;
+        text-transform: uppercase;
+        background-color: rgba(220, 184, 244, 0.3);
+    }
+}
+
+/***** USERS *****/
+.main2 {
+
+    .bloc,
+    .bloc1,
+    .bloc2,
+    .bloc3 {
+        margin: 20px;
+    }
+
+    .bloc3 {
+        display: flex;
+        justify-content: start;
+        align-items: start;
+
+        .bloc4 {
+            padding-top: 5px;
+            background-color: white;
+            border-radius: 10px;
+            margin: 0 10px;
+        }
+
+        label,
+        li {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 15px;
+            color: #A9A9A9;
+            padding: 0 15px;
+        }
+    }
+}
+
+/***** ADMIN *****/
+.main3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .addItems {
+        display: flex;
+        align-items: start;
+        margin: 40px;
+
+        label {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 20px;
+            color: white;
+            padding: 0 15px;
+        }
+    }
+}
+
+.categories {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .bloc {
+        margin: 10px 0;
+    }
+
+    .adminSubmit {
+        color: white;
+        font-size: 15px;
+    }
+}
+
+.productsForm {
+    width: 50%;
+}

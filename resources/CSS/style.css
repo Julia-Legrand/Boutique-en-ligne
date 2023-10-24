@@ -1,0 +1,443 @@
+@charset "UTF-8";
+/***** COLORS *****/
+/***** GLOBAL *****/
+h1 {
+  font-family: "Caprasimo", serif;
+  font-size: 90px;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  text-shadow: #f0d3e9 1px 0 40px;
+  margin: 40px;
+}
+
+h2 {
+  font-family: "Over the Rainbow", cursive;
+  font-weight: bold;
+  text-align: center;
+  color: #4F376D;
+  margin: 20px;
+}
+
+h2::after {
+  display: block;
+  height: 2px;
+  background-color: #4F376D;
+  width: 100px;
+  content: "";
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-family: "Over the Rainbow", cursive;
+  text-align: center;
+  color: white;
+  margin: 20px;
+}
+
+p {
+  font-family: "Montserrat", sans-serif;
+  color: black;
+}
+
+.input {
+  width: 300px;
+  font-family: "Montserrat", sans-serif;
+  color: #4F376D;
+  font-size: 15px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: white;
+  margin: 0 10px;
+}
+
+.submit {
+  font-family: "Montserrat", sans-serif;
+  color: #4F376D;
+  font-size: 15px;
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: white;
+  text-decoration: none;
+}
+
+.submit:hover {
+  background-color: #916bc0;
+  color: white;
+  text-decoration: none;
+}
+
+/***** HEADER *****/
+header .navbar-expand-lg {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .home-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 95vh;
+  background-image: url(../images/wallpaper.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.navSubmit {
+  color: #4F376D;
+  font-size: 15px;
+  border: 1px solid #4F376D;
+  padding: 0 10px;
+  border-radius: 5px;
+  background-color: white;
+  text-decoration: none;
+}
+
+/********** INDEX **********/
+/***** CATEGORIES *****/
+#categories {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 40px;
+}
+#categories .shoeCategories {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#categories .shoeCategories .boots {
+  height: 500px;
+  width: 300px;
+  background-image: linear-gradient(rgba(68, 44, 95, 0.9), rgba(3, 2, 3, 0)), url(../images/bottes.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: rgba(74, 48, 104, 0.2) 0px 7px 29px 0px;
+  border-radius: 10px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+}
+#categories .shoeCategories .ankleBoots {
+  height: 500px;
+  width: 300px;
+  background-image: linear-gradient(rgba(68, 44, 95, 0.9), rgba(3, 2, 3, 0)), url(../images/bottines.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: rgba(74, 48, 104, 0.2) 0px 7px 29px 0px;
+  border-radius: 10px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+}
+#categories .shoeCategories .submit:hover {
+  text-decoration: none;
+  background-color: #916bc0;
+  color: white;
+}
+
+/***** OUR STORY *****/
+#ourStory {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#ourStory .story {
+  display: flex;
+}
+#ourStory .story .storyText {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 40px 40px 40px 80px;
+  width: 60%;
+}
+#ourStory .story .storyPhoto {
+  width: 40%;
+  height: 500px;
+  background-image: url(../images/creator.png);
+  background-position: center;
+  background-size: cover;
+  box-shadow: rgba(74, 48, 104, 0.2) 0px 7px 29px 0px;
+  margin: 20px 60px 20px 20px;
+  border-radius: 10px;
+}
+
+/***** GUESTS COMMENTS *****/
+#comments {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#comments .commentsLine {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 20px 0;
+}
+#comments .commentsLine .guest {
+  display: flex;
+  align-items: center;
+  margin: 40px;
+}
+#comments .guest .picture1 {
+  background-image: url(../images/clients/client1.png);
+  background-position: center;
+  background-size: cover;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  margin: 10px;
+}
+#comments .guest .picture2 {
+  background-image: url(../images/clients/client2.png);
+  background-position: center;
+  background-size: cover;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  margin: 10px;
+}
+#comments .guest .picture3 {
+  background-image: url(../images/clients/client3.png);
+  background-position: center;
+  background-size: cover;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  margin: 10px;
+}
+#comments .commentTitle {
+  height: 150px;
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+#comments .commentTitle .nameGuest {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+#comments .commentTitle q {
+  font-style: italic;
+}
+#comments .commentTitle q:before {
+  content: "“";
+  font-size: 450%;
+  font-family: "Montserrat", sans-serif;
+  color: #916bc0;
+}
+
+/***** SERVICES *****/
+#services {
+  background: linear-gradient(to right, #C43825, #F1C5AB, #9C4380);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+}
+#services .guestService {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 80px;
+}
+#services .guestService i {
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+
+/***** NEWSLETTER *****/
+#newsletter {
+  background-image: url(../images/wallpaper2.jpg);
+  background-position: top;
+  background-size: cover;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/***** FOOTER *****/
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .blocLeft {
+  display: flex;
+  align-items: center;
+  margin: 20px;
+}
+footer .blocLeft i {
+  margin: 0 5px;
+}
+footer .blocRight a {
+  color: #4F376D;
+  margin: 0 10px;
+}
+
+/********** LOGIN, USERS, ADMIN, UPDATE PRODUCTS **********/
+.body3 {
+  background-image: linear-gradient(rgba(41, 34, 49, 0.9), rgba(3, 2, 3, 0)), url(../images/wallpaper3.jpg);
+  background-position: center;
+  background-size: cover;
+  color: white;
+}
+.body3 h2 {
+  color: white;
+  font-size: 40px;
+}
+.body3 h2::after {
+  background-color: white;
+}
+
+a.brand {
+  color: white;
+  font-family: "Caprasimo", serif;
+  text-decoration: none;
+  font-size: 30px;
+  margin: 10px;
+}
+
+.main2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main2 .bloc,
+.main2 .bloc1,
+.main2 .bloc2,
+.main2 .bloc3 {
+  margin: 20px;
+}
+.main2 .bloc3 {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+}
+.main2 .bloc3 .bloc4 {
+  padding-top: 5px;
+  background-color: white;
+  border-radius: 10px;
+  margin: 0 10px;
+}
+.main2 .bloc3 label,
+.main2 .bloc3 li {
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  color: #A9A9A9;
+  padding: 0 15px;
+}
+
+table {
+  border: 1px solid white;
+  border-collapse: collapse;
+  table-layout: auto;
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 50px;
+}
+table td {
+  border: 1px solid white;
+  height: 40px;
+  text-align: center;
+  padding: 5px;
+}
+table th {
+  border: 1px solid white;
+  height: 40px;
+  text-align: center;
+  padding: 5px;
+  text-transform: uppercase;
+  background-color: rgba(220, 184, 244, 0.3);
+}
+
+/***** USERS *****/
+.main2 .bloc,
+.main2 .bloc1,
+.main2 .bloc2,
+.main2 .bloc3 {
+  margin: 20px;
+}
+.main2 .bloc3 {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+}
+.main2 .bloc3 .bloc4 {
+  padding-top: 5px;
+  background-color: white;
+  border-radius: 10px;
+  margin: 0 10px;
+}
+.main2 .bloc3 label,
+.main2 .bloc3 li {
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  color: #A9A9A9;
+  padding: 0 15px;
+}
+
+/***** ADMIN *****/
+.main3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main3 .addItems {
+  display: flex;
+  align-items: start;
+  margin: 40px;
+}
+.main3 .addItems label {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  color: white;
+  padding: 0 15px;
+}
+
+.categories {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.categories form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.categories .bloc {
+  margin: 10px 0;
+}
+.categories .adminSubmit {
+  color: white;
+  font-size: 15px;
+}
+
+.productsForm {
+  width: 50%;
+}/*# sourceMappingURL=style.css.map */
