@@ -100,21 +100,21 @@ header .home-title {
   text-decoration: none;
 }
 
-/********** INDEX **********/
+/********** INDEX PAGE **********/
 /***** CATEGORIES *****/
-#categories {
+#categoriesIndex {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 40px;
 }
-#categories .shoeCategories {
+#categoriesIndex .shoeCategories {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
-#categories .shoeCategories .boots {
+#categoriesIndex .shoeCategories .boots {
   height: 500px;
   width: 300px;
   background-image: linear-gradient(rgba(68, 44, 95, 0.9), rgba(3, 2, 3, 0)), url(../images/bottes.png);
@@ -129,7 +129,7 @@ header .home-title {
   align-items: center;
   justify-content: start;
 }
-#categories .shoeCategories .ankleBoots {
+#categoriesIndex .shoeCategories .ankleBoots {
   height: 500px;
   width: 300px;
   background-image: linear-gradient(rgba(68, 44, 95, 0.9), rgba(3, 2, 3, 0)), url(../images/bottines.png);
@@ -144,7 +144,7 @@ header .home-title {
   align-items: center;
   justify-content: start;
 }
-#categories .shoeCategories .submit:hover {
+#categoriesIndex .shoeCategories .submit:hover {
   text-decoration: none;
   background-color: #916bc0;
   color: white;
@@ -184,12 +184,12 @@ header .home-title {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 20px;
 }
 #comments .commentsLine {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin: 20px 0;
 }
 #comments .commentsLine .guest {
   display: flex;
@@ -296,21 +296,47 @@ footer .blocRight a {
   margin: 0 10px;
 }
 
-/********** LOGIN, USERS, ADMIN, UPDATE PRODUCTS **********/
-.body3 {
+/********** SHOP PAGE **********/
+#shoeCategories {
+  display: flex;
+  flex-direction: column;
+  margin: 40px;
+}
+#shoeCategories h3 {
+  color: #4F376D;
+  text-align: left;
+  margin: 20px 0;
+}
+#shoeCategories .articles {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 20px 0;
+}
+
+#shoeCategories .articles .card {
+  width: 280px;
+  border-radius: 10px;
+  box-shadow: rgba(74, 48, 104, 0.2) 0px 7px 29px 0px;
+}
+
+/********** ADMIN PAGES **********/
+/***** GLOBAL *****/
+.bodyAdmin {
   background-image: linear-gradient(rgba(41, 34, 49, 0.9), rgba(3, 2, 3, 0)), url(../images/wallpaper3.jpg);
   background-position: center;
   background-size: cover;
   color: white;
 }
-.body3 h2 {
+.bodyAdmin h2 {
   color: white;
   font-size: 40px;
 }
-.body3 h2::after {
+.bodyAdmin h2::after {
   background-color: white;
 }
 
+/***** HEADER *****/
 a.brand {
   color: white;
   font-family: "Caprasimo", serif;
@@ -319,37 +345,7 @@ a.brand {
   margin: 10px;
 }
 
-.main2 {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.main2 .bloc,
-.main2 .bloc1,
-.main2 .bloc2,
-.main2 .bloc3 {
-  margin: 20px;
-}
-.main2 .bloc3 {
-  display: flex;
-  justify-content: start;
-  align-items: start;
-}
-.main2 .bloc3 .bloc4 {
-  padding-top: 5px;
-  background-color: white;
-  border-radius: 10px;
-  margin: 0 10px;
-}
-.main2 .bloc3 label,
-.main2 .bloc3 li {
-  font-family: "Montserrat", sans-serif;
-  font-size: 15px;
-  color: #A9A9A9;
-  padding: 0 15px;
-}
-
+/***** TABLES *****/
 table {
   border: 1px solid white;
   border-collapse: collapse;
@@ -372,72 +368,109 @@ table th {
   background-color: rgba(220, 184, 244, 0.3);
 }
 
-/***** USERS *****/
-.main2 .bloc,
-.main2 .bloc1,
-.main2 .bloc2,
-.main2 .bloc3 {
-  margin: 20px;
-}
-.main2 .bloc3 {
-  display: flex;
-  justify-content: start;
-  align-items: start;
-}
-.main2 .bloc3 .bloc4 {
-  padding-top: 5px;
-  background-color: white;
-  border-radius: 10px;
-  margin: 0 10px;
-}
-.main2 .bloc3 label,
-.main2 .bloc3 li {
+/***** FORMS *****/
+label,
+li {
   font-family: "Montserrat", sans-serif;
   font-size: 15px;
   color: #A9A9A9;
   padding: 0 15px;
 }
 
-/***** ADMIN *****/
-.main3 {
+/********** LOGIN PAGE **********/
+.mainLogin {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.main3 .addItems {
+
+/********** USERS PAGE **********/
+.mainUsers {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.bloc {
+  margin: 20px;
+}
+
+.bloc2 {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  margin: 20px;
+}
+.bloc2 .bloc3 {
+  padding-top: 5px;
+  background-color: white;
+  border-radius: 10px;
+  margin: 0 10px;
+}
+
+/***** ADMIN PAGE *****/
+.mainAdmin {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.mainAdmin .addItems {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
   align-items: start;
   margin: 40px;
 }
-.main3 .addItems label {
-  font-family: "Montserrat", sans-serif;
+.mainAdmin .addItems label {
   font-size: 20px;
   color: white;
-  padding: 0 15px;
+}
+.mainAdmin .addItems .bloc {
+  margin: 20px 0;
 }
 
-.categories {
-  width: 50%;
+.categoriesForm {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
-.categories form {
+.categoriesForm form {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
-.categories .bloc {
-  margin: 10px 0;
-}
-.categories .adminSubmit {
+.categoriesForm .adminSubmit {
   color: white;
   font-size: 15px;
 }
 
 .productsForm {
-  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.productsForm form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/***** UPDATE PAGE *****/
+.mainUpdate {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.mainUpdate .updateForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.mainUpdate .updateForm label {
+  font-size: 20px;
+  color: white;
 }/*# sourceMappingURL=style.css.map */

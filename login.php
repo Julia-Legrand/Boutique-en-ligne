@@ -15,13 +15,13 @@
     <link rel="stylesheet" href="Resources/CSS/style.css">
 </head>
 
-<body style="height: 100vh;" class="body3">
+<body style="height: 100vh;" class="bodyAdmin">
 
     <header>
         <a class="brand" href="index.php">Mad Santiags</a>
     </header>
 
-    <main class="main2">
+    <main class="mainLogin">
         <h2>Connecte-toi</h2>
 
         <div class="bloc">

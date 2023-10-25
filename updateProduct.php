@@ -55,46 +55,51 @@ if ($_POST) {
     <!--FONTS-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Nothing+You+Could+Do&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Montserrat:wght@300&family=Over+the+Rainbow&display=swap" rel="stylesheet">
 
-    <!--STYLES-->
+    <!--STYLE-->
     <link rel="stylesheet" href="Resources/CSS/style.css">
 </head>
 
-<body style="height: 100vh;" class="body3">
+<body style="height: 100vh;" class="bodyAdmin">
 
     <header>
         <a class="brand" href="index.php">Mad Santiags</a>
     </header>
 
-    <main class="main2">
-        <h3>Quelle information souhaitez-vous mettre à jour ?</h3>
-
-        <form action="updateProduct.php?idProduct=<?= $idProduct ?>" method="POST">
-            <label for="name">Nom :</label>
-            <input type="text" name="name" value="<?= $products['name'] ?>">
-
-            <label for="category">Catégorie :</label>
-            <select name="idCategory">
-                <option disabled>--Choisissez une catégorie--</option>
-                <?php
-                foreach ($categories as $key => $value) { ?>
-                    <option value="<?= $value['idCategory'] ?>"><?= $value['type'] ?></option>
-                <?php
-                }
-                ?>
-            </select>
-
-            <label for="reference">Référence :</label>
-            <input type="text" name="reference" value="<?= $products['reference'] ?>">
-
-            <label for="price">Prix :</label>
-            <input type="number" name="price" value="<?= $products['price'] ?>">
-
-            <div class="actions">
-                <input type="submit" value="Valider">
-                <a href="admin.php">Annuler</a>
-            </div>
+    <main class="mainUpdate">
+        <h2>Quelle information souhaitez-vous mettre à jour ?</h2>
+        <div class="updateForm">
+            <form action="updateProduct.php?idProduct=<?= $idProduct ?>" method="POST">
+                <div class="bloc">
+                    <label for="name">Nom :</label>
+                    <input type="text" class="input" name="name" value="<?= $products['name'] ?>">
+                </div>
+                <div class="bloc">
+                    <label for="category">Catégorie :</label>
+                    <select name="idCategory">
+                        <option disabled>--Choisissez une catégorie--</option>
+                        <?php
+                        foreach ($categories as $key => $value) { ?>
+                            <option value="<?= $value['idCategory'] ?>"><?= $value['type'] ?></option>
+                        <?php
+                        }
+                        ?>
+                    </select>
+                </div>
+                <div class="bloc">
+                    <label for="reference">Référence :</label>
+                    <input type="text" class="input" name="reference" value="<?= $products['reference'] ?>">
+                </div>
+                <div class="bloc">
+                    <label for="price">Prix :</label>
+                    <input type="number" class="input" name="price" value="<?= $products['price'] ?>">
+                </div>
+        </div>
+        <div class="actions">
+            <input type="submit" class="submit" value="Valider">
+            <a href="admin.php" class="submit">Annuler</a>
+        </div>
         </form>
     </main>
 

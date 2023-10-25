@@ -1,5 +1,6 @@
 @import 'mixins';
 @import 'variables';
+@import 'responsive';
 
 /***** GLOBAL *****/
 h1 {
@@ -68,10 +69,10 @@ header {
     @include navSubmit;
 }
 
-/********** INDEX **********/
+/********** INDEX PAGE **********/
 
 /***** CATEGORIES *****/
-#categories {
+#categoriesIndex {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -160,12 +161,12 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 20px;
 
     .commentsLine {
         display: flex;
         flex-direction: row;
         align-items: center;
-        margin: 20px 0;
 
         .guest {
             display: flex;
@@ -288,8 +289,34 @@ footer {
     }
 }
 
-/********** LOGIN, USERS, ADMIN, UPDATE PRODUCTS **********/
-.body3 {
+/********** SHOP PAGE **********/
+#shoeCategories {
+    display: flex;
+    flex-direction: column;
+    margin: 40px;
+        h3 {
+            color: $darkpurple;
+            text-align: left;
+            margin: 20px 0;
+        }
+        .articles {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            margin: 20px 0;
+        }       
+}
+#shoeCategories .articles .card {
+    width: 280px;
+    border-radius: 10px;
+    box-shadow: rgba(74, 48, 104, 0.2) 0px 7px 29px 0px;
+}
+
+
+/********** ADMIN PAGES **********/
+
+/***** GLOBAL *****/
+.bodyAdmin {
     background-image: linear-gradient(rgba(41, 34, 49, 0.9), rgba(3, 2, 3, 0)), url(../images/wallpaper3.jpg);
     background-position: center;
     background-size: cover;
@@ -305,6 +332,7 @@ footer {
     }
 }
 
+/***** HEADER *****/
 a.brand {
     color: white;
     font-family: 'Caprasimo', serif;
@@ -313,41 +341,7 @@ a.brand {
     margin: 10px;
 }
 
-.main2 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    .bloc,
-    .bloc1,
-    .bloc2,
-    .bloc3 {
-        margin: 20px;
-    }
-
-    .bloc3 {
-        display: flex;
-        justify-content: start;
-        align-items: start;
-
-        .bloc4 {
-            padding-top: 5px;
-            background-color: white;
-            border-radius: 10px;
-            margin: 0 10px;
-        }
-
-        label,
-        li {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 15px;
-            color: #A9A9A9;
-            padding: 0 15px;
-        }
-    }
-}
-
+/***** TABLES *****/
 table {
     border: 1px solid white;
     border-collapse: collapse;
@@ -372,75 +366,83 @@ table {
     }
 }
 
-/***** USERS *****/
-.main2 {
+/***** FORMS *****/
+label,
+li {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    color: #A9A9A9;
+    padding: 0 15px;
+}
 
-    .bloc,
-    .bloc1,
-    .bloc2,
+/********** LOGIN PAGE **********/
+.mainLogin {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/********** USERS PAGE **********/
+.mainUsers {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bloc {
+    margin: 20px;
+}
+
+.bloc2 {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    margin: 20px;
+
     .bloc3 {
-        margin: 20px;
-    }
-
-    .bloc3 {
-        display: flex;
-        justify-content: start;
-        align-items: start;
-
-        .bloc4 {
-            padding-top: 5px;
-            background-color: white;
-            border-radius: 10px;
-            margin: 0 10px;
-        }
-
-        label,
-        li {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 15px;
-            color: #A9A9A9;
-            padding: 0 15px;
-        }
+        padding-top: 5px;
+        background-color: white;
+        border-radius: 10px;
+        margin: 0 10px;
     }
 }
 
-/***** ADMIN *****/
-.main3 {
+/***** ADMIN PAGE *****/
+.mainAdmin {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
     .addItems {
+        width: 100%;
         display: flex;
+        justify-content: space-evenly;
         align-items: start;
         margin: 40px;
 
         label {
-            font-family: 'Montserrat', sans-serif;
             font-size: 20px;
             color: white;
-            padding: 0 15px;
+        }
+
+        .bloc {
+            margin: 20px 0;
         }
     }
 }
 
-.categories {
-    width: 50%;
+.categoriesForm {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 
     form {
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
-    }
-
-    .bloc {
-        margin: 10px 0;
     }
 
     .adminSubmit {
@@ -450,5 +452,32 @@ table {
 }
 
 .productsForm {
-    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/***** UPDATE PAGE *****/
+.mainUpdate {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .updateForm {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        label {
+            font-size: 20px;
+            color: white;
+        }
+    }
 }

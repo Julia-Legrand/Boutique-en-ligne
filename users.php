@@ -26,26 +26,26 @@ $users = $req->fetchAll(PDO::FETCH_ASSOC);
     <link rel="stylesheet" href="Resources/CSS/style.css">
 </head>
 
-<body class="body3">
+<body class="bodyAdmin">
 
     <header>
         <a class="brand" href="index.php">Mad Santiags</a>
     </header>
 
-    <main class="main2">
+    <main class="mainUsers">
         <h2>Créer un compte</h2>
 
-        <div class="bloc">
+        <div class="mainBloc">
             <form action="newUserForm.php" method="POST">
-                <div class="bloc1">
+                <div class="bloc">
                     <input type="text" class="input" name="firstName" placeholder="Prénom">
                     <input type="text" class="input" name="lastName" placeholder="Nom">
                 </div>
-                <div class="bloc2">
+                <div class="bloc">
                     <input type="text" class="input" name="mail" placeholder="Email">
                 </div>
-                <div class="bloc3">
-                    <div class="bloc4">
+                <div class="bloc2">
+                    <div class="bloc3">
                         <label for="password">Choisis un mot de passe avec :</label>
                         <ul>
                             <li>Au moins 8 caractères</li>

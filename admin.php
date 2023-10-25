@@ -36,27 +36,25 @@ $products = $req2->fetchAll(PDO::FETCH_ASSOC);
     <link rel="stylesheet" href="Resources/CSS/style.css">
 </head>
 
-<body class="body3">
+<body class="bodyAdmin">
 
     <header>
         <a class="brand" href="index.php">Mad Santiags</a>
     </header>
 
-    <main class="main3">
+    <main class="mainAdmin">
 
         <div class="addItems">
-            <div class="categories">
+            <div class="categoriesForm">
                 <h2>Ajouter une catégorie</h2>
                 <form action="categoryForm.php" method="POST">
                     <div class="bloc">
                         <label for="type">Type de catégorie :</label>
                         <input type="text" class="input" name="type">
                     </div>
-                    <div class="bloc">
-                        <input type="submit" class="submit" value="Créer une nouvelle categorie">
-                    </div>
+                    <input type="submit" class="submit" value="Créer une nouvelle categorie">
                 </form>
-                <h3>Catégories existantes</h3>
+                <h3 style="margin-top:50px;">Catégories existantes</h3>
                 <table>
                     <?php
                     foreach ($categories as $key => $value) { ?>
@@ -71,37 +69,37 @@ $products = $req2->fetchAll(PDO::FETCH_ASSOC);
             <div class="productsForm">
                 <h2>Ajouter un produit</h2>
                 <form action="productForm.php" method="POST" enctype="multipart/form-data">
-                    <div class="bloc">
-                        <label for="name">Nom :</label>
-                        <input type="text" class="input" name="name">
+                    <div class="mainBloc">
+                        <div class="bloc">
+                            <label for="name">Nom :</label>
+                            <input type="text" class="input" name="name">
+                        </div>
+                        <div class="bloc">
+                            <label for="category">Catégorie :</label>
+                            <select name="idCategory">
+                                <option disabled>--Choisissez une catégorie--</option>
+                                <?php
+                                foreach ($categories as $key => $value) { ?>
+                                    <option value="<?= $value['idCategory'] ?>"><?= $value['type'] ?></option>
+                                <?php
+                                }
+                                ?>
+                            </select>
+                        </div>
+                        <div class="bloc">
+                            <label for="reference">Référence :</label>
+                            <input type="text" class="input" name="reference">
+                        </div>
+                        <div class="bloc">
+                            <label for="price">Prix :</label>
+                            <input type="number" class="input" name="price">
+                        </div>
+                        <div class="bloc">
+                            <label for="image">Photo :</label>
+                            <input type="file" class="input" name="image" class="submit">
+                        </div>
                     </div>
-                    <div class="bloc">
-                        <label for="category">Catégorie :</label>
-                        <select name="idCategory">
-                            <option disabled>--Choisissez une catégorie--</option>
-                            <?php
-                            foreach ($categories as $key => $value) { ?>
-                                <option value="<?= $value['idCategory'] ?>"><?= $value['type'] ?></option>
-                            <?php
-                            }
-                            ?>
-                        </select>
-                    </div>
-                    <div class="bloc">
-                        <label for="reference">Référence :</label>
-                        <input type="text" class="input" name="reference">
-                    </div>
-                    <div class="bloc">
-                        <label for="price">Prix :</label>
-                        <input type="number" class="input" name="price">
-                    </div>
-                    <div class="bloc">
-                        <label for="image">Photo :</label>
-                        <input type="file" class="input" name="image" class="submit">
-                    </div>
-                    <div class="bloc">
-                        <input type="submit" class="submit" value="Ajouter un nouveau produit">
-                    </div>
+                    <input type="submit" class="submit" value="Ajouter un nouveau produit">
                 </form>
             </div>
         </div>

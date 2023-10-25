@@ -80,28 +80,30 @@ $products = $req2->fetchAll(PDO::FETCH_ASSOC);
 
     <main>
 
-        <section class="shoeCategories">
+        <section class="shoeCategories" id="shoeCategories">
 
             <?php
             foreach ($categories as $key => $value1) {
             ?>
-                <h4><?= $value1['type']; ?></h4>
-
+                <h2><?= $value1['type']; ?></h2>
+                <div class="articles">
                 <?php
                 foreach ($products as $key => $value2) {
                     if ($value1['idCategory'] == $value2['idCategory']) { ?>
 
-                        <div class="card" style="width: 18rem;">
+                        <div class="card">
                             <img src="uploads/<?= $value2['image'] ?>" class="card-img-top" alt="photo du produit">
                             <div class="card-body">
-                                <h5 class="card-title"><?= $value2['name']; ?></h5>
+                                <h3 class="card-title"><?= $value2['name']; ?></h3>
                                 <p class="card-reference">Réf. <?= $value2['reference']; ?></p>
-                                <p class="card-price"><?= $value2['price']; ?> €</p>
+                                <p class="card-price" style="font-weight:bold;"><?= $value2['price']; ?> €</p>
                             </div>
                         </div>
             <?php
                     }
-                }
+                } ?>
+                </div>
+            <?php
             }
             ?>
         </section>

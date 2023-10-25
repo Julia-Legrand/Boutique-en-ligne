@@ -75,7 +75,7 @@ if (isset($_SESSION['mail'])) {
 
         <!--CATEGORIES-->
 
-        <section class="categories" id="categories">
+        <section class="categoriesIndex" id="categoriesIndex">
             <h2>Catégories</h2>
 
             <div class="shoeCategories">
