@@ -1,11 +1,11 @@
 <?php
 
-/*session_start();
+session_start();
 
 if (isset($_SESSION['mail'])) {
 } else {
     header('location:login.php');
-}*/
+}
 
 ?>
 
@@ -42,7 +42,7 @@ if (isset($_SESSION['mail'])) {
             </div>
 
             <div class="navBrand">
-                <a class="navbar-brand" href="index.php" style="color: #4F376D;">Mad Santiags</a>
+                <a class="navbar-brand" href="index.php"><img src="../Evaluation-TP-PHP/resources/images/logo.png" style="color: #4F376D; width:50px; height:50px;" alt="logo"></a>
             </div>
 
             <div class="navIcones">
@@ -166,7 +166,7 @@ if (isset($_SESSION['mail'])) {
         <!--NEWSLETTER-->
 
         <section class="newsletter" id="newsletter">
-            <h2>Inscrivez-vous à la newsletter pour recevoir des réductions</h2>
+            <h2>Inscris-toi à la newsletter pour recevoir des réductions</h2>
             <form class="newsletterForm">
                 <input type="mail" class="input" placeholder="Email">
                 <input type="submit" class="submit" value="S'inscrire">
@@ -177,7 +177,7 @@ if (isset($_SESSION['mail'])) {
 
     <footer>
         <div class="blocLeft">
-            <a class="navbar-brand" href="index.php" style="color: #4F376D;">Mad Santiags</a>
+            <a class="brand" href="index.php" style="color: #4F376D;">Mad Santiags</a>
             <div class="socials">
                 <a href="https://github.com/Julia-Legrand/Evaluation-TP-PHP.git" style="color: #4F376D;"><i class="fa-brands fa-github"></i></a>
                 <a href="https://www.instagram.com" style="color: #4F376D;"><i class="fa-brands fa-instagram"></i></a>

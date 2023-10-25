@@ -50,7 +50,7 @@ $products = $req2->fetchAll(PDO::FETCH_ASSOC);
             </div>
 
             <div class="navBrand">
-                <a class="navbar-brand" href="index.php" style="color: #4F376D;">Mad Santiags</a>
+                <a class="navbar-brand" href="index.php"><img src="../Evaluation-TP-PHP/resources/images/logo.png" style="color: #4F376D; width:50px; height:50px;" alt="logo"></a>
             </div>
 
             <div class="navIcones">
@@ -87,21 +87,21 @@ $products = $req2->fetchAll(PDO::FETCH_ASSOC);
             ?>
                 <h2><?= $value1['type']; ?></h2>
                 <div class="articles">
-                <?php
-                foreach ($products as $key => $value2) {
-                    if ($value1['idCategory'] == $value2['idCategory']) { ?>
+                    <?php
+                    foreach ($products as $key => $value2) {
+                        if ($value1['idCategory'] == $value2['idCategory']) { ?>
 
-                        <div class="card">
-                            <img src="uploads/<?= $value2['image'] ?>" class="card-img-top" alt="photo du produit">
-                            <div class="card-body">
-                                <h3 class="card-title"><?= $value2['name']; ?></h3>
-                                <p class="card-reference">Réf. <?= $value2['reference']; ?></p>
-                                <p class="card-price" style="font-weight:bold;"><?= $value2['price']; ?> €</p>
+                            <div class="card">
+                                <img src="uploads/<?= $value2['image'] ?>" class="card-img-top" alt="photo du produit">
+                                <div class="card-body">
+                                    <h3 class="card-title"><?= $value2['name']; ?></h3>
+                                    <p class="card-reference">Réf. <?= $value2['reference']; ?></p>
+                                    <p class="card-price" style="font-weight:bold;"><?= $value2['price']; ?> €</p>
+                                </div>
                             </div>
-                        </div>
-            <?php
-                    }
-                } ?>
+                    <?php
+                        }
+                    } ?>
                 </div>
             <?php
             }
@@ -112,7 +112,7 @@ $products = $req2->fetchAll(PDO::FETCH_ASSOC);
 
     <footer>
         <div class="blocLeft">
-            <a class="navbar-brand" href="index.php" style="color: #4F376D;">Mad Santiags</a>
+            <a class="brand" href="index.php" style="color: #4F376D;">Mad Santiags</a>
             <div class="socials">
                 <a href="https://github.com/Julia-Legrand/Evaluation-TP-PHP.git" style="color: #4F376D;"><i class="fa-brands fa-github"></i></a>
                 <a href="https://www.instagram.com" style="color: #4F376D;"><i class="fa-brands fa-instagram"></i></a>

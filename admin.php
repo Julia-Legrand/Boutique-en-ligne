@@ -107,28 +107,37 @@ $products = $req2->fetchAll(PDO::FETCH_ASSOC);
         <div class="productsInStock">
             <h2>Produits en stock</h2>
             <table>
-                <th>Nom</th>
-                <th>Catégorie</th>
-                <th>Référence</th>
-                <th>Prix</th>
-                <th>Photo</th>
-                <th>Actions</th>
+                <thead>
+                    <tr>
+                        <th>Nom</th>
+                        <th>Catégorie</th>
+                        <th>Référence</th>
+                        <th>Prix</th>
+                        <th>Photo</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
 
                 <?php foreach ($products as $key => $value) { ?>
-                    <tr>
-                        <td><?= $value['name'] ?></td>
-                        <td><?= $value['type'] ?></td>
-                        <td><?= $value['reference'] ?></td>
-                        <td><?= $value['price'] ?></td>
-                        <td><img src="uploads/<?= $value['image'] ?>" width=auto height=80 alt="photo du produit"></td>
-                        <td><a href="deleteProduct.php?idProduct=<?= $value['idProduct'] ?>" class="submit">Supprimer</a>
-                            <a href="updateProduct.php?idProduct=<?= $value['idProduct'] ?>" class="submit">Modifier</a>
-                        </td>
-                    </tr>
+                    <tbody>
+                        <tr>
+                            <td data-label="NOM :"><?= $value['name'] ?></td>
+                            <td data-label="CATÉGORIE :"><?= $value['type'] ?></td>
+                            <td data-label="RÉF. :"><?= $value['reference'] ?></td>
+                            <td data-label="PRIX :"><?= $value['price'] ?></td>
+                            <td data-label="PHOTO :"><img src="uploads/<?= $value['image'] ?>" width=auto height=80 alt="photo du produit"></td>
+                            <td data-label="ACTIONS :"><a href="deleteProduct.php?idProduct=<?= $value['idProduct'] ?>" class="submit">Supprimer</a>
+                                <a href="updateProduct.php?idProduct=<?= $value['idProduct'] ?>" class="submit">Modifier</a>
+                            </td>
+                        </tr>
+                    </tbody>
                 <?php } ?>
             </table>
         </div>
     </main>
+
+    <!--SCRIPT-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
 </body>
 

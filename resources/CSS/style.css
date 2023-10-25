@@ -1,5 +1,226 @@
 @charset "UTF-8";
 /***** COLORS *****/
+@media all and (max-width: 1250px) {
+  /********** INDEX PAGE **********/
+  #comments .commentsLine {
+    flex-direction: column !important;
+  }
+  #comments .commentsLine .guest {
+    margin: 40px 0px;
+  }
+}
+@media all and (max-width: 930px) {
+  /********** INDEX PAGE **********/
+  #ourStory .story {
+    flex-direction: column;
+    align-items: center;
+  }
+  #ourStory .story .storyText {
+    width: 70% !important;
+    padding: 20px !important;
+    margin: 20px;
+  }
+  #ourStory .story .storyPhoto {
+    width: 70% !important;
+    margin: 20px !important;
+  }
+  #services .guestService {
+    margin: 20px !important;
+  }
+  footer .blocLeft {
+    flex-direction: column;
+    align-items: start !important;
+  }
+  footer .blocLeft .socials {
+    margin-left: 15px;
+  }
+  footer .blocRight {
+    display: flex;
+    flex-direction: column;
+  }
+  footer .blocRight a {
+    margin: 0 5px !important;
+  }
+  /********** ADMIN PAGE **********/
+  .addItems {
+    flex-direction: column;
+    align-items: center !important;
+    margin: 40px 0 !important;
+  }
+  /********** SHOP PAGE **********/
+  #shoeCategories .articles {
+    flex-direction: column;
+    align-items: center;
+  }
+  #shoeCategories .articles .card {
+    margin: 20px 0;
+  }
+}
+@media all and (max-width: 740px) {
+  /********** ADMIN PAGE **********/
+  .mainAdmin table thead {
+    display: none;
+  }
+  .mainAdmin table tr {
+    display: block;
+    margin-bottom: 40px;
+  }
+  .mainAdmin table td {
+    display: block;
+    text-align: center;
+    height: auto !important;
+    padding: 12px !important;
+  }
+  .mainAdmin table td:before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+  }
+}
+@media all and (max-width: 690px) {
+  /********** INDEX PAGE **********/
+  #categoriesIndex {
+    margin: 20px 0;
+  }
+  #categoriesIndex .shoeCategories {
+    flex-direction: column;
+  }
+  /********** USERS PAGE **********/
+  .mainBloc form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .mainBloc form .bloc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .mainBloc form .bloc2 {
+    flex-direction: column;
+    align-items: center;
+  }
+  /********** LOGIN PAGE **********/
+  .mainLogin .bloc form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media all and (max-width: 520px) {
+  /********** INDEX PAGE **********/
+  .navSearch {
+    display: none !important;
+  }
+  .home-title h1 {
+    font-size: 70px;
+  }
+  #services {
+    flex-direction: column;
+    padding: 20px;
+  }
+  #services i {
+    margin-bottom: 10px !important;
+  }
+  #newsletter .newsletterForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #newsletter .newsletterForm .input {
+    width: 250px;
+  }
+  footer {
+    flex-direction: column;
+  }
+  footer .blocLeft {
+    align-items: center !important;
+    margin: 0 !important;
+  }
+  footer .socials {
+    margin: 0 !important;
+  }
+  footer .blocRight {
+    align-items: center !important;
+    margin: 20px !important;
+  }
+  /***** UPDATE PAGE *****/
+  .mainUpdate {
+    height: auto !important;
+    margin: 40px 0;
+  }
+}
+@media all and (max-width: 400px) {
+  /********** INDEX PAGE **********/
+  .home-title h1 {
+    font-size: 50px;
+  }
+  #ourStory .story .storyText {
+    width: 90% !important;
+    padding: 0px !important;
+    margin: 5px !important;
+  }
+  #ourStory .story .storyPhoto {
+    width: 90% !important;
+    margin: 5px !important;
+  }
+  #comments .commentsLine .guest {
+    flex-direction: column;
+    margin: 40px 0px;
+  }
+  #comments .commentsLine .guest .commentTitle {
+    align-items: center;
+  }
+  /********** USERS PAGE **********/
+  .mainBloc input {
+    width: 250px;
+  }
+  table thead {
+    display: none;
+  }
+  table tr {
+    display: block;
+    margin-bottom: 40px;
+  }
+  table td {
+    display: block;
+    text-align: center;
+    height: auto !important;
+    padding: 12px !important;
+  }
+  table td:before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+  }
+  /********** LOGIN PAGE **********/
+  .mainLogin {
+    height: auto !important;
+  }
+  .mainLogin .bloc form input {
+    width: 250px;
+  }
+  /********** ADMIN PAGE **********/
+  .mainAdmin input {
+    width: 250px;
+  }
+  .mainAdmin .addItems .bloc {
+    display: flex;
+    flex-direction: column;
+  }
+  .mainAdmin table .submit {
+    font-size: 12px;
+    margin: 6px;
+    padding: 8px 12px;
+  }
+  /********** UPDATE PAGE **********/
+  .updateForm select {
+    margin: 0 15px;
+  }
+  .updateForm input {
+    width: 250px;
+  }
+}
 /***** GLOBAL *****/
 h1 {
   font-family: "Caprasimo", serif;
@@ -51,7 +272,7 @@ p {
   border-radius: 5px;
   border: none;
   background-color: white;
-  margin: 0 10px;
+  margin: 10px;
 }
 
 .submit {
@@ -190,11 +411,12 @@ header .home-title {
   display: flex;
   flex-direction: row;
   align-items: center;
+  margin-bottom: 40px;
 }
 #comments .commentsLine .guest {
   display: flex;
   align-items: center;
-  margin: 40px;
+  margin: 20px;
 }
 #comments .guest .picture1 {
   background-image: url(../images/clients/client1.png);
@@ -247,7 +469,7 @@ header .home-title {
 
 /***** SERVICES *****/
 #services {
-  background: linear-gradient(to right, #C43825, #F1C5AB, #9C4380);
+  background: linear-gradient(to right, #D96965, #f0cab4, #DA70A9);
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -267,14 +489,19 @@ header .home-title {
 
 /***** NEWSLETTER *****/
 #newsletter {
-  background-image: url(../images/wallpaper2.jpg);
+  background-image: linear-gradient(rgba(250, 181, 181, 0.5), rgba(247, 199, 247, 0.5)), url(../images/wallpaper2.jpg);
   background-position: top;
   background-size: cover;
-  height: 50vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+#newsletter h2 {
+  margin-top: 80px;
+}
+#newsletter form {
+  margin-bottom: 80px;
 }
 
 /***** FOOTER *****/
@@ -290,6 +517,9 @@ footer .blocLeft {
 }
 footer .blocLeft i {
   margin: 0 5px;
+}
+footer .blocRight {
+  margin: 20px;
 }
 footer .blocRight a {
   color: #4F376D;
@@ -342,13 +572,11 @@ a.brand {
   font-family: "Caprasimo", serif;
   text-decoration: none;
   font-size: 30px;
-  margin: 10px;
+  margin: 15px;
 }
 
 /***** TABLES *****/
 table {
-  border: 1px solid white;
-  border-collapse: collapse;
   table-layout: auto;
   font-family: "Montserrat", sans-serif;
   margin-bottom: 50px;
@@ -383,6 +611,8 @@ li {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 40px 0;
+  height: 90vh;
 }
 
 /********** USERS PAGE **********/
@@ -464,6 +694,7 @@ li {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 100vh;
 }
 .mainUpdate .updateForm {
   display: flex;

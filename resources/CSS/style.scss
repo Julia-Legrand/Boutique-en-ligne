@@ -167,11 +167,12 @@ header {
         display: flex;
         flex-direction: row;
         align-items: center;
+        margin-bottom: 40px;
 
         .guest {
             display: flex;
             align-items: center;
-            margin: 40px;
+            margin: 20px;
         }
     }
 
@@ -235,7 +236,7 @@ header {
 
 /***** SERVICES *****/
 #services {
-    background: linear-gradient(to right, #C43825, #F1C5AB, #9C4380);
+    background: linear-gradient(to right, #D96965, #f0cab4, #DA70A9);
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -257,14 +258,21 @@ header {
 
 /***** NEWSLETTER *****/
 #newsletter {
-    background-image: url(../images/wallpaper2.jpg);
+    background-image: linear-gradient(rgba(250, 181, 181, 0.5), rgba(247, 199, 247, 0.5)), url(../images/wallpaper2.jpg);
     background-position: top;
     background-size: cover;
-    height: 50vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    h2 {
+        margin-top: 80px;
+    }
+
+    form {
+        margin-bottom: 80px;
+    }
 }
 
 /***** FOOTER *****/
@@ -283,9 +291,13 @@ footer {
         }
     }
 
-    .blocRight a {
-        color: $darkpurple;
-        margin: 0 10px;
+    .blocRight {
+        margin: 20px;
+
+        a {
+            color: $darkpurple;
+            margin: 0 10px;
+        }
     }
 }
 
@@ -294,18 +306,21 @@ footer {
     display: flex;
     flex-direction: column;
     margin: 40px;
-        h3 {
-            color: $darkpurple;
-            text-align: left;
-            margin: 20px 0;
-        }
-        .articles {
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-            margin: 20px 0;
-        }       
+
+    h3 {
+        color: $darkpurple;
+        text-align: left;
+        margin: 20px 0;
+    }
+
+    .articles {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 20px 0;
+    }
 }
+
 #shoeCategories .articles .card {
     width: 280px;
     border-radius: 10px;
@@ -338,13 +353,11 @@ a.brand {
     font-family: 'Caprasimo', serif;
     text-decoration: none;
     font-size: 30px;
-    margin: 10px;
+    margin: 15px;
 }
 
 /***** TABLES *****/
 table {
-    border: 1px solid white;
-    border-collapse: collapse;
     table-layout: auto;
     font-family: 'Montserrat', sans-serif;
     margin-bottom: 50px;
@@ -381,6 +394,8 @@ li {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 40px 0;
+    height: 90vh;
 }
 
 /********** USERS PAGE **********/
@@ -469,6 +484,7 @@ li {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 100vh;
 
     .updateForm {
         display: flex;
