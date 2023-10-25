@@ -43,7 +43,7 @@ $users = $req->fetchAll(PDO::FETCH_ASSOC);
                     <input type="text" class="input" name="lastName" placeholder="Nom">
                 </div>
                 <div class="bloc">
-                    <input type="text" class="input" name="mail" placeholder="Email">
+                    <input type="email" class="input" name="mail" placeholder="Email">
                 </div>
                 <div class="bloc2">
                     <div class="bloc3">
@@ -63,7 +63,7 @@ $users = $req->fetchAll(PDO::FETCH_ASSOC);
             <input type="submit" class="submit" value="Créer">
             <a href="login.php" class="submit">Retour</a>
         </div>
-        </form>
+            </form>
 
         <h2>Utilisateurs actifs</h2>
         <table>
@@ -85,7 +85,6 @@ $users = $req->fetchAll(PDO::FETCH_ASSOC);
                 </tbody>
             <?php } ?>
         </table>
-        </div>
     </main>
 
     <!--SCRIPT-->

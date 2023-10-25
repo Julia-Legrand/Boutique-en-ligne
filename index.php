@@ -168,7 +168,7 @@ if (isset($_SESSION['mail'])) {
         <section class="newsletter" id="newsletter">
             <h2>Inscris-toi à la newsletter pour recevoir des réductions</h2>
             <form class="newsletterForm">
-                <input type="mail" class="input" placeholder="Email">
+                <input type="email" class="input" placeholder="Email">
                 <input type="submit" class="submit" value="S'inscrire">
             </form>
         </section>

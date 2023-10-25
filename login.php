@@ -27,7 +27,7 @@
 
         <div class="bloc">
             <form action="loginForm.php" method="POST">
-                <input type="mail" class="input" name="mail" placeholder="Email">
+                <input type="email" class="input" name="mail" placeholder="Email">
                 <input type="password" class="input" name="password" placeholder="Mot de passe">
         </div>
         <div class="actions">
