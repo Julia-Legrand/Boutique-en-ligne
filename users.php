@@ -63,7 +63,7 @@ $users = $req->fetchAll(PDO::FETCH_ASSOC);
             <input type="submit" class="submit" value="Créer">
             <a href="login.php" class="submit">Retour</a>
         </div>
-            </form>
+        </form>
 
         <h2>Utilisateurs actifs</h2>
         <table>

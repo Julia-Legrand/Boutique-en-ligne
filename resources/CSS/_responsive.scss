@@ -109,6 +109,9 @@
 
         .shoeCategories {
             flex-direction: column;
+                .boots, .ankleBoots {
+                    margin: 20px 0 !important;
+                }
         }
     }
 
