@@ -69,3 +69,14 @@
     background-color: white;
     text-decoration: none;
 }
+
+@mixin submitPanier {
+    font-family: 'Montserrat',sans-serif;
+    color: white;
+    font-size: 15px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #916bc0;
+    text-decoration: none;
+}

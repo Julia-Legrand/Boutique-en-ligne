@@ -304,6 +304,23 @@ p {
   text-decoration: none;
 }
 
+.submitPanier {
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  font-size: 15px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: #916bc0;
+  text-decoration: none;
+}
+
+.submitPanier:hover {
+  background-color: #4F376D;
+  color: white;
+  text-decoration: none;
+}
+
 /***** HEADER *****/
 header .navbar-expand-lg {
   display: flex;
@@ -715,4 +732,45 @@ li {
 .mainUpdate .updateForm label {
   font-size: 20px;
   color: white;
+}
+
+/********** SHOPPING BASKET PAGE **********/
+.bodyBasket {
+  height: 100vh;
+  background-image: linear-gradient(rgba(32, 19, 47, 0.7), rgba(87, 37, 87, 0)), url(../images/wallpaper.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+}
+.bodyBasket #basket {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.bodyBasket h2 {
+  color: white;
+  padding-top: 40px;
+}
+.bodyBasket h2 h2::after {
+  background-color: white;
+}
+.bodyBasket form table.basketTable {
+  table-layout: auto;
+  font-family: "Montserrat", sans-serif;
+  margin: 40px 0;
+}
+.bodyBasket form table.basketTable td {
+  border: 1px solid white;
+  height: 60px;
+  text-align: center;
+  padding: 5px;
+}
+.bodyBasket form table.basketTable th {
+  border: 1px solid white;
+  height: 40px;
+  text-align: center;
+  padding: 5px;
+  text-transform: uppercase;
+  background-color: rgba(220, 184, 244, 0.3);
 }/*# sourceMappingURL=style.css.map */

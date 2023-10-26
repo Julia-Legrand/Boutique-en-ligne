@@ -58,6 +58,9 @@ if (isset($_SESSION['mail'])) {
                             <a class="nav-link active" aria-current="page" href="admin.php" style="color: #4F376D; font-size:20px;"><i class="fa-solid fa-bag-shopping"></i></a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="panier.php" style="color: #4F376D; font-size:20px;"><i class="fa-solid fa-basket-shopping"></i></a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="logout.php" style="color: #4F376D; font-size:20px;"><i class="fa-solid fa-arrow-right-from-bracket"></i></a>
                         </li>
                     </ul>

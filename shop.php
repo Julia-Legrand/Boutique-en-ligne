@@ -49,10 +49,6 @@ $products = $req2->fetchAll(PDO::FETCH_ASSOC);
                 </form>
             </div>
 
-            <div class="navBrand">
-                <a class="navbar-brand" href="index.php"><img src="../Evaluation-TP-PHP/resources/images/logo.png" style="color: #4F376D; width:50px; height:50px;" alt="logo"></a>
-            </div>
-
             <div class="navIcones">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -60,13 +56,16 @@ $products = $req2->fetchAll(PDO::FETCH_ASSOC);
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="users.php" style="color: #4F376D;"><i class="fa-regular fa-user"></i></a>
+                            <a class="nav-link active" aria-current="page" href="users.php" style="color: #4F376D; font-size:20px;"><i class="fa-regular fa-user"></i></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="admin.php" style="color: #4F376D;"><i class="fa-solid fa-bag-shopping"></i></a>
+                            <a class="nav-link active" aria-current="page" href="admin.php" style="color: #4F376D; font-size:20px;"><i class="fa-solid fa-bag-shopping"></i></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="logout.php" style="color: #4F376D;"><i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+                            <a class="nav-link active" aria-current="page" href="panier.php" style="color: #4F376D; font-size:20px;"><i class="fa-solid fa-basket-shopping"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="logout.php" style="color: #4F376D; font-size:20px;"><i class="fa-solid fa-arrow-right-from-bracket"></i></a>
                         </li>
                     </ul>
                 </div>
@@ -97,6 +96,7 @@ $products = $req2->fetchAll(PDO::FETCH_ASSOC);
                                     <h3 class="card-title"><?= $value2['name']; ?></h3>
                                     <p class="card-reference">Réf. <?= $value2['reference']; ?></p>
                                     <p class="card-price" style="font-weight:bold;"><?= $value2['price']; ?> €</p>
+                                    <a class="submitPanier" href="panier.php?action=ajout&n=<?= $value2['name'] ?>&q=1&p=<?= $value2['price'] ?>">Ajouter au panier</a>
                                 </div>
                             </div>
                     <?php
