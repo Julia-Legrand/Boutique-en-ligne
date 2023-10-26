@@ -42,7 +42,7 @@ if (isset($_SESSION['mail'])) {
             </div>
 
             <div class="navBrand">
-                <a class="navbar-brand" href="index.php"><img src="../Evaluation-TP-PHP/resources/images/logo.png" style="color: #4F376D; width:50px; height:50px;" alt="logo"></a>
+                <a class="navbar-brand" href="index.php"><img src="../Evaluation-TP-PHP/resources/images/logo.png" style="color: #4F376D; width:60px; height:60px;" alt="logo"></a>
             </div>
 
             <div class="navIcones">
@@ -52,13 +52,13 @@ if (isset($_SESSION['mail'])) {
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="users.php" style="color: #4F376D;"><i class="fa-regular fa-user"></i></a>
+                            <a class="nav-link active" aria-current="page" href="users.php" style="color: #4F376D; font-size:20px;"><i class="fa-regular fa-user"></i></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="admin.php" style="color: #4F376D;"><i class="fa-solid fa-bag-shopping"></i></a>
+                            <a class="nav-link active" aria-current="page" href="admin.php" style="color: #4F376D; font-size:20px;"><i class="fa-solid fa-bag-shopping"></i></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="logout.php" style="color: #4F376D;"><i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+                            <a class="nav-link active" aria-current="page" href="logout.php" style="color: #4F376D; font-size:20px;"><i class="fa-solid fa-arrow-right-from-bracket"></i></a>
                         </li>
                     </ul>
                 </div>
@@ -67,7 +67,7 @@ if (isset($_SESSION['mail'])) {
 
         <div class="home-title">
             <h1>Mad Santiags</h1>
-            <h2><a href="shop.php" style="color:white; font-size:50px; text-shadow:#f0d3e9 1px 0 30px; text-decoration:none;">Let's go !</a></h2>
+            <h4><a href="shop.php" style="color:white; font-size:50px; text-shadow:#f0d3e9 1px 0 30px; text-decoration:none;">Let's go !</a></h4>
         </div>
     </header>
 

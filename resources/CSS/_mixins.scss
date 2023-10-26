@@ -23,6 +23,14 @@
     margin: 20px;
 }
 
+@mixin title4 {
+    font-family: 'Over the Rainbow', cursive;
+    font-weight: bold;
+    text-align: center;
+    color: #4F376D;
+    margin: 20px;
+}
+
 @mixin paragraph {
     font-family: 'Montserrat',sans-serif;
     color: black;
